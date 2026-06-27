@@ -15,13 +15,8 @@
     "clsx": "^2.1.1",
     "install": "^0.13.0",
     "lucide-react": "^0.542.0",
-<<<<<<< HEAD
     "next": "^16.2.9",
-    "postprocessing": "^6.37.7",
-=======
-  "next": "^16.2.4",    "postprocessing": "^6.37.7",
->>>>>>> e4869dc01bcbb1f8e565442506629ab25cc6e9d1
-    "razorpay": "^2.9.6",
+    "postprocessing": "^6.37.7",    "razorpay": "^2.9.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-toastify": "^11.0.5",
