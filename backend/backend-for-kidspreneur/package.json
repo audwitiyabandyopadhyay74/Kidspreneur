@@ -10,7 +10,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "prod": "cross-env NODE_ENV=production node src/index.js",
-    "build": "node vercel-build.js",
+    "build": "node build",
     "lint": "eslint . --ext .js",
     "test": "jest --coverage",
     "migrate": "node src/utils/migrate.js",
