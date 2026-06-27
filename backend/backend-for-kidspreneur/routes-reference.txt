@@ -1,0 +1,90 @@
+# API Routes Reference
+
+This file lists all backend API routes, their HTTP methods, descriptions, and the controller functions that handle them. Use this as a quick reference for backend/frontend integration and debugging.
+
+---
+
+## Auth Routes (`/api/auth`)
+
+- **POST** `/signup` — User registration (local)
+  - Controller: `signup`
+- **POST** `/login` — User login (local)
+  - Controller: `login`
+- **GET** `/profile` — Get current user profile (JWT protected)
+  - Controller: `getProfile`
+- **PUT** `/change-password` — Change password (JWT protected)
+  - Controller: `changePassword`
+- **POST** `/forgot-password` — Request password reset
+  - Controller: `forgotPassword`
+- **POST** `/reset-password/:token` — Reset password with token
+  - Controller: `resetPassword`
+- **GET** `/google` — Start Google OAuth
+  - Controller: Passport (Google)
+- **GET** `/google/callback` — Google OAuth callback
+  - Controller: `socialLoginCallback`
+- **GET** `/facebook` — Start Facebook OAuth
+  - Controller: Passport (Facebook)
+- **GET** `/facebook/callback` — Facebook OAuth callback
+  - Controller: `socialLoginCallback`
+
+---
+
+## Idea Routes (`/api/ideas`)
+
+- **GET** `/` — List all ideas
+  - Controller: `getIdeas`
+- **POST** `/` — Create new idea (JWT protected)
+  - Controller: `createIdea`
+- **GET** `/:id` — Get single idea by ID
+  - Controller: `getIdeaById`
+- **PUT** `/:id` — Update idea (JWT protected, owner only)
+  - Controller: `updateIdea`
+- **DELETE** `/:id` — Delete idea (JWT protected, owner only)
+  - Controller: `deleteIdea`
+- **POST** `/:id/like` — Like an idea (JWT protected)
+  - Controller: `likeIdea`
+- **POST** `/:id/dislike` — Dislike an idea (JWT protected)
+  - Controller: `dislikeIdea`
+- **POST** `/:id/comment` — Add comment to idea (JWT protected)
+  - Controller: `commentOnIdea`
+- **POST** `/:id/fund` — Fund an idea (JWT protected)
+  - Controller: `fundIdea`
+
+---
+
+## Payment Routes (`/api/payments`)
+
+- **POST** `/order` — Create Razorpay order (JWT protected)
+  - Controller: `createOrder`
+- **POST** `/verify` — Verify Razorpay payment (JWT protected)
+  - Controller: `verifyPayment`
+- **GET** `/` — List all payments for user (JWT protected)
+  - Controller: `getPayments`
+
+---
+
+## Leaderboard Routes (`/api/leaderboard`)
+
+- **GET** `/` — Get top 10 users by funding
+  - Controller: `getLeaderboard`
+
+---
+
+## Settings/Bank Details Routes (`/api/settings`)
+
+- **GET** `/bank` — Get user bank details (JWT protected)
+  - Controller: `getBankDetails`
+- **PUT** `/bank` — Update user bank details (JWT protected)
+  - Controller: `updateBankDetails`
+
+---
+
+## Notes
+- All routes requiring authentication use the `protect` middleware (JWT).
+- Social logins return a JWT on success.
+- All error responses are clear and consistent.
+- CORS is enabled for all routes.
+
+---
+
+For any missing or new routes, update this file accordingly.
