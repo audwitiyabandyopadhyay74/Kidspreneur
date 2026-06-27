@@ -66,16 +66,8 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false, // Disable source maps in production for better performance
 
-  // Enable Webpack optimizations
-  webpack: (config, { isServer, dev }) => {
-    // Additional webpack configurations can be added here
-    if (!isServer && !dev) {
-      // Enable tree shaking and module concatenation in production
-      config.optimization.concatenateModules = true;
-      config.optimization.usedExports = true;
-    }
-    return config;
-  },
+  // Turbopack is the default bundler in Next.js 15+
+  // No webpack config needed - Turbopack handles optimizations automatically
 };
 
 // Only require @next/bundle-analyzer in development
