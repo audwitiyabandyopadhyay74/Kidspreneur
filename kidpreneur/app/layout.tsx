@@ -10,7 +10,6 @@ import type { Metadata } from 'next';
 const inter = Inter({ subsets: ["latin"] });
 const eduCursive = Edu_NSW_ACT_Cursive({
   subsets: ["latin"],
-  weight: ["400", "700"],
   variable: "--font-edu-cursive",
 });
 
