@@ -1,17 +1,14 @@
 // Load environment variables first
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
-// Get the current directory name in ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Load environment variables from .env file in the project root
 dotenv.config({ path: path.join(__dirname, '../../.env') });
 
-// Log environment variables for debugging
 console.log('Environment:', process.env.NODE_ENV);
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Set' : 'Not set');
 

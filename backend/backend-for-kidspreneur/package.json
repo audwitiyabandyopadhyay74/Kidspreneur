@@ -15,7 +15,7 @@
     "test": "jest --coverage",
     "migrate": "node src/utils/migrate.js",
     "seed": "node src/utils/seed.js",
-    "vercel-build": "npm install --production"
+    "vercel-build": "npm install && node vercel-build.js"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
