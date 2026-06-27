@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+// import { useEffect } from 'react'; // unused
 import Navbar from '../../components/Navbar';
-import { API_BASE } from '../../../../lib/api';
+// import { API_BASE } from '../../../lib/api'; // unused
 
 const ConnectionsPage = () => {
   const [connections, setConnections] = useState([

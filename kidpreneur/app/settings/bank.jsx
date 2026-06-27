@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const BankDetailsPage = ({ user, onUpdate }) => {
+const BankDetailsPage = ({ user, onUpdate: _onUpdate }) => {
+  // onUpdate parameter received but only conditionally called
   const [bankName, setBankName] = useState(user?.bankName || '');
   const [accountNumber, setAccountNumber] = useState(user?.accountNumber || '');
   const [ifsc, setIfsc] = useState(user?.ifsc || '');

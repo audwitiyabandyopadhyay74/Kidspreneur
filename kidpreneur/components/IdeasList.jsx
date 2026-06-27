@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import ideaService from '@/lib/api/ideaService';
 import { useApi } from '@/lib/api/useApi';
 

@@ -14,7 +14,7 @@ const Page = () => {
   const [country, setCountry] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [username, setUsername] = useState('');
+  // const [username, setUsername] = useState(''); // unused - username is not used in the form
   const router = useRouter();
 
   const [type1, setType1] = useState("password");
